@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title Here</title>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+</head>
+
+<body>
+  
+    <h1>FLARPY BORBS</h1>
+  
+    <div>
+        
+        <iframe id = 'game-frame' src="https://i.simmer.io/@SONOFEDDY/flarpy-borbs"></iframe>
+    </div>
+    
+</body>
+
+<script>
+    
+    let gameFrame = document.getElementById("game-frame")
+
+    function resizeFrame () {
+        let w = window.innerWidth
+        let h = window.innerHeight
+        console.log(w)
+        console.log(h)
+        gameFrame.width = w * 0.9
+        gameFrame.height = h * 0.8
+    }
+
+    setInterval(resizeFrame,1000/60)
+
+</script>
+
+</html>
